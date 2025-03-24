@@ -1,16 +1,327 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página em Criação</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Página em criação</h1>
-        <p>Estamos trabalhando para trazer algo incrível para você. Volte em breve!</p>
-        <div class="loader"></div>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Agro Fernando &#8211; A nutrição inteligente para sua lavoura com o adubo
+      de qualidade, econômico e sustentável você encontra aqui
+    </title>
+    <link rel="icon" type="image/png" href="img/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="A Agro Fernando oferece adubo de NPK avariado de alta qualidade, econômico e sustentável para sua lavoura. Melhore sua produtividade com fertilizantes eficientes."
+    />
+    <meta
+      name="keywords"
+      content="adubo NPK, adubo NPK à venda, fertilizante NPK preço, comprar adubo NPK, fertilizante agrícola NPK, NPK de alta qualidade, adubo para lavoura, fertilizante sustentável, agropecuária, nutrição do solo, agricultura econômica, adubo NPK na regição de São José do Rio Preto, fornecedor de fertilizantes NPK em São Paulo, onde comprar fertilizante NPK barato, melhor adubo para aumentar a produtividade, fertilizante NPK sustentável para lavouras, vantagens do adubo NPK avariado, fertilizante econômico para agricultura, como escolher o melhor adubo para o solo"
+    />
+    <meta name="author" content="Agro Fernando" />
+    <!-- <meta http-equiv="refresh" content="0;url=/maintenance.html"> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo.svg" alt="Agro Fernando company logo" />
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" title="Hamburger icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <button class="close-menu" id="close-menu" onclick="toggleMenu()" title="Close hamburger icon">
+          &times;
+        </button>
+        <nav class="nav-links" id="menu">
+          <a data-target="who-we-are" onclick="closeMenu()">Quem somos</a>
+          <a data-target="about-the-product" onclick="closeMenu()"
+            >Sobre o produto</a
+          >
+          <a data-target="our-products" onclick="closeMenu()"
+            >Nossos produtos</a
+          >
+          <a data-target="our-videos" onclick="closeMenu()">Nossos vídeos</a>
+          <a data-target="doubts" onclick="closeMenu()">Tire suas dúvidas</a>
+        </nav>
+        <button
+          class="header-button"
+          onclick="abrirModal('tirar algumas dúvidas')"
+          title="Open modal"
+        >
+          <i class="fab fa-whatsapp"></i> Tire suas dúvidas
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="container-section" id="who-we-are">
+        <div class="who-we-are-container">
+          <div class="about-who-we-are-image">
+            <img src="img/bigbag-img.png" alt="Big bag with company logo" />
+          </div>
+          <div class="who-we-are-text-about">
+            <h1>
+              Comprove os benefícios do nosso adubo e faça parte dessa solução
+              eficiente para o seu plantio!
+            </h1>
+            <p>
+              Na <strong>Agro Fernando</strong>, oferecemos adubo de NPK
+              avariado de <strong>alta qualidade</strong>, garantindo uma opção
+              <strong>econômica e sustentável</strong> para a sua lavoura. Nosso
+              produto passa por um rigoroso controle de qualidade, fornecendo
+              assim os nutrientes essenciais para o solo e plantio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-section" id="about-the-product">
+        <div class="about-product-container">
+          <div>
+            <h2>Vantagens do <span>adubo NPK avariado</span></h2>
+            <div class="about-product-benefit">
+              <img src="img/tabler_cash.svg" alt="Image related to economy" />
+              <div class="about-product-benefit-texto">
+                <h3>Excelente custo-benefício</h3>
+                <p>
+                  Uma alternativa mais acessível para agricultores que buscam
+                  reduzir custos sem comprometer a produtividade.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-product-benefit">
+              <img src="img/tabler_plant.svg" alt="Image related to fertile soil" />
+              <div class="about-product-benefit-texto">
+                <h3>Melhora a fertilidade do solo</h3>
+                <p>
+                  O adubo NPK avariado mantém os nutrientes essenciais para um
+                  solo mais fértil, garantindo um crescimento saudável das
+                  plantas.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-product-benefit">
+              <img src="img/lucide_tractor.svg" alt="Productivity related image" />
+              <div class="about-product-benefit-texto">
+                <h3>Aumento na produtividade</h3>
+                <p>
+                  Favorece o desenvolvimento saudável das plantas, resultando em
+                  colheitas mais produtivas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-product-img-container">
+            <img
+              src="img/hand-giving-fertilizer.jpg"
+              alt="Image showing a hand putting fertilizer on a plant"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="container-section" id="our-products">
+        <h2>Nossos <span>produtos</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/npk_de_plantio.mp4" type="video/mp4" />
+            </video>
+            <h3>NPK de plantio</h3>
+            <button onclick="abrirModal('NPK de plantio')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento
+            </button>
+          </div>
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/avariado_04-30-10.mp4" type="video/mp4" />
+            </video>
+            <h3>Adubo avariado 04-30-10</h3>
+            <button onclick="abrirModal('Adubo avariado 04-30-10')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento
+            </button>
+          </div>
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/avariado_20-05-20.mp4" type="video/mp4" />
+            </video>
+            <h3>Adubo avariado 20-05-20</h3>
+            <button onclick="abrirModal('Adubo avariado 20-05-20')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento
+            </button>
+          </div>
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/formulado_20-00-20.mp4" type="video/mp4" />
+            </video>
+            <h3>Adubo formulado 20-00-20</h3>
+            <button onclick="abrirModal('Adubo formulado 20-00-20')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento
+            </button>
+          </div>
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source
+                src="video/nitrogenada_de_cobertura_com_ureia_protegida.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <h3>Cobertura nitrogenada com ureia</h3>
+            <button onclick="abrirModal('Cobertura nitrogenada com ureia')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-section" id="our-videos">
+        <h2>Nossos <span>vídeos</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/galeria.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="card">
+            <video
+              controls
+              muted
+              controlslist="nodownload"
+              oncontextmenu="return false;"
+            >
+              <source src="video/galeria_1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <div class="shappe-container"></div>
+      <section class="container-section" id="doubts">
+        <h2>Dúvidas sobre o <span>ADUBO DE NPK AVARIADO?</span></h2>
+
+        <div class="doubt-container">
+          <button class="doubt-question" title="Contact button">
+            <i class="fas fa-chevron-down"></i>O que é o Adubo de NPK avariado?
+          </button>
+          <div class="question-answer">
+            <p>
+              O adubo de NPK avariado, ou varredura de NPK, é um fertilizante
+              resultante do reaproveitamento de resíduos da agroindústria e da
+              reciclagem de materiais orgânicos. O processo envolve a coleta e o
+              tratamento desses resíduos, convertendo-os em um adubo de
+              qualidade apto para uso na agricultura. O adubo de NPK avariado é
+              um fertilizante utilizado para melhorar a qualidade do solo e
+              promover o crescimento saudável das plantas, fornecendo ao solo
+              nutrientes essenciais para o desenvolvimento das plantas. É usado
+              em plantações de todos os tipos, como pomares, entre outros.
+            </p>
+          </div>
+        </div>
+        <div class="doubt-container">
+          <button class="doubt-question">
+            <i class="fas fa-chevron-down"></i>O adubo de varredura é mais
+            barato que os fertilizantes convencionais?
+          </button>
+          <div class="question-answer">
+            <p>
+              Sim, geralmente ele tem um custo mais baixo, podendo ser de até
+              50% mais barato que o adubo tradicional.
+            </p>
+          </div>
+        </div>
+        <div class="doubt-container">
+          <button class="doubt-question">
+            <i class="fas fa-chevron-down"></i>Para quais culturas o adubo de
+            varredura é indicado?
+          </button>
+          <div class="question-answer">
+            <p>
+              Ele pode ser utilizado em culturas de menor exigência nutricional,
+              como pastagens, ou como adubo complementar em solos pobres.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container-section" id="doubts">
+        <div class="contact-container">
+          <div>
+            <button onclick="abrirModal('tirar algumas dúvidas')" title="Contact button">
+              <i class="fab fa-whatsapp"></i> Entre em contado
+            </button>
+          </div>
+          <div class="contact-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61566203794255"
+              target="_blank"
+              aria-label="See facebook company profile page"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a target="_blank"><i class="fab fa-instagram"></i></a>
+            <a><i class="fas fa-envelope"></i></a>
+          </div>
+          <img src="img/logo.svg" alt="Agro Fernando company logo" />
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Entre em contato</h2>
+        <button onclick="solicitarOrcamento('Fernando')" title="Contact button">
+          <i class="fab fa-whatsapp"></i> Fernando
+        </button>
+        <button onclick="solicitarOrcamento('Eliana')" title="Contact button">
+          <i class="fab fa-whatsapp"></i> Eliana
+        </button>
+      </div>
     </div>
-</body>
+
+    <footer class="footer-content">
+      <p>
+        Copyright © <span id="year"></span> Agro Fernando – Todos os direitos
+        reservados
+      </p>
+    </footer>
+  </body>
 </html>
