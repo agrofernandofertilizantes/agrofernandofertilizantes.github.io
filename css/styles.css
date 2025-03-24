@@ -481,6 +481,14 @@ button i {
     flex-direction: column;
   }
 
+  .about-product-benefit-texto {
+    text-align: center;
+  }
+
+  .about-product-benefit {
+    flex-direction: column;
+  }
+
   .about-product-img-container {
     margin-top: 1.25rem;
   }
